@@ -1,7 +1,6 @@
 #include <iostream>
 
 using namespace std;
-//nizhodqsht red
 int main()
 {
     int a, b, c;
@@ -11,28 +10,7 @@ int main()
     cin >> b;
     cout << "Enter another number" << endl;
     cin >> c;
-    /* if(a >= b)
-       {
-           if ((b >= c))
-            cout << a<< " " << b<<" " << c ;
-           else
-            cout << a << " " << c<< " " << b;
-       }
-    if(a >= c)
-       {
-           if ((c >= b))
-            cout << a<< " " << c<<" " << b ;
-           else
-            cout << a << " " << b<< " " << c;
-       }
-    if (b >= c)
-       {
-           if (c >= a)
-            cout << b<< " " << c<<" " << a ;
-           else
-            cout << b<< " " << a<< " " << c;
-       }
-    */
+
 
     if ((a<=b)&& (a<=c))
     {
