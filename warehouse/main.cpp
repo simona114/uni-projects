@@ -11,8 +11,6 @@ void erase_element(vector<int>& vec, int position);
 
 int main()
 {
-
-
     vector<int> products;
     vector<int> pieces;
     string input = "" ;
@@ -112,7 +110,6 @@ int main()
                 }
             }
         }
-
         else if (comm == get)
         {
             if ((int)products.size() == 0)
@@ -135,7 +132,6 @@ int main()
         }
         else
             cout << "Invalid command" << endl << endl;
-
     }
     return 0;
 }
