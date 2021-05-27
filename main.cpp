@@ -1,39 +1,25 @@
 #include <iostream>
+#include <cmath>
 
 using namespace std;
+
 int main()
 {
-    int a, b, c;
-    cout << "Enter a number " << endl;
-    cin >> a;
-    cout << "Enter another number" << endl;
-    cin >> b;
-    cout << "Enter another number" << endl;
-    cin >> c;
+    const int n = 7;
+    int a[n] = {3, 7, -2, 4, 12, -23, 9};
+
+    int max_global = a[0], max_current = a[0];
 
 
-    if ((a <= b) && (a <= c))
+    for(int i = 1 ; i < n; i++)
     {
-        if (b <= c)
-            cout << a << b << c;
-        else
-            cout << a << c << b;
-    }
-    
-    else if ((b <= a) && (b <= c))
-    {
-        if (a <= c)
-            cout << b << a << c;
-        else
-            cout << b << c<< a;
+        max_current = max(a[i], a[i] + max_current);
+        max_global = max(max_current, max_global);
     }
 
-    else if ((c <= a) && (c <= b))
-    {
-        if (b <= a)
-            cout << c << b << a;
-        else
-            cout << c<< a << b;
-    }
+    for(int i = 0; i < n; i++)
+        cout << a[i] << " ";
+
+    cout << endl << "max subarray sum is : " << max_global;
     return 0;
 }
